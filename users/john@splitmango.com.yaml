@@ -1,0 +1,14 @@
+name: 'John Seo'
+super: true
+id: 9ec77f07-a7f3-49a8-bf4c-fa77f2665f20
+password_hash: $2y$10$UcJnSrTK3I7TjIxgN1UwiOogyn1i7qnT1eUN/nSvWmZt73w/fNNjC
+preferences:
+  collections:
+    chairs:
+      columns:
+        - title
+        - photo
+        - price
+        - chair_type
+        - superchair
+        - butts

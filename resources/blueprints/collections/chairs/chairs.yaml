@@ -1,0 +1,234 @@
+title: Chair
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: photo
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Photo
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+      -
+        handle: overview
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Overview
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+      -
+        handle: description
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Description
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+      -
+        handle: price
+        field:
+          input_type: text
+          prepend: $
+          antlers: false
+          display: Price
+          type: text
+          icon: text
+          instructions: 'Price per night, in USD'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: chair_type
+        field:
+          options:
+            Bench: null
+            Chair: null
+            Couch: null
+            Hammock: null
+            Stool: null
+            Swing: null
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: true
+          push_tags: true
+          cast_booleans: false
+          display: 'Chair Type'
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+      -
+        handle: has_cushion
+        field:
+          options:
+            'yes': 'Yes'
+            'no': 'No'
+          inline: true
+          cast_booleans: false
+          display: 'Has Cushion'
+          type: radio
+          icon: radio
+          instructions: 'Does this seat have a cushion?'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: butts
+        field:
+          display: Butts
+          type: integer
+          icon: integer
+          instructions: 'The number of butts this chair can handle'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: location
+        field:
+          options:
+            indoors: Indoors
+            outdoors: Outdoors
+          inline: true
+          cast_booleans: false
+          display: Location
+          type: radio
+          icon: radio
+          listable: hidden
+          instructions_position: above
+      -
+        handle: owner
+        field:
+          max_items: 1
+          mode: select
+          display: Owner
+          type: users
+          icon: users
+          listable: hidden
+          instructions_position: above
+      -
+        handle: superchair
+        field:
+          default: false
+          display: Superchair
+          type: toggle
+          icon: toggle
+          instructions: 'For the very specialist of chairs'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: amenities
+        field:
+          fields:
+            -
+              handle: amenity
+              field:
+                input_type: text
+                antlers: false
+                display: Amenity
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+            -
+              handle: icon
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 1
+                display: Icon
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                folder: svgs
+            -
+              handle: color
+              field:
+                theme: classic
+                lock_opacity: false
+                default_color_mode: HEXA
+                color_modes:
+                  - HEXA
+                display: Color
+                type: color
+                icon: color
+                listable: hidden
+                instructions_position: above
+          mode: table
+          add_row: 'Add Amenity'
+          reorderable: true
+          display: Amenities
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+  location:
+    display: Location
+    fields:
+      -
+        handle: city
+        field:
+          input_type: text
+          antlers: false
+          display: City
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: country
+        field:
+          input_type: text
+          antlers: false
+          display: Country
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

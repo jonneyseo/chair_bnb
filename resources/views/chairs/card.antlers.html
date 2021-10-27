@@ -1,0 +1,11 @@
+<a href="{{ url }}" class="{{ class }}">
+    <img class="rounded-lg mb-4" src="{{ glide:photo width="720" height="480" }}" alt="">
+    <div class="flex items-center text-sm text-gray-700 mb-1">
+        {{ if superchair }}
+         <div class="border mr-2 rounded uppercase font-medium tracking-widest text-xs px-1 text-gray-900">Superchair</div>
+         {{ /if }}
+         {{ city }}, {{ country }}
+     </div>
+    <div class="font-medium">{{ title }}</div>
+    <div class="text-sm text-gray-700"><strong>${{ price }}</strong> / night</div>
+</a>

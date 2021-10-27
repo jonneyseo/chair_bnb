@@ -1,0 +1,45 @@
+{{ featured_chair }}
+<div class="relative flex -mt-px" style="background: url('{{ glide:photo width="1600" height="900" }}') center center no-repeat; height: 50vh;">
+    <a href="{{ url }}" class="text-white bg-red-700 bg-opacity-80 p-6">
+        <div class="mb-8 mt-8">
+            <h1 class="font-bold text-5xl mb-5">Featured Chair</h1>
+            <h2 class="text-xl font-medium mb-2">{{ title }}</h2>
+            <p class="text-red-300">{{ city }}, {{ country }}</p>
+        </div>
+        <div>
+            <div class="text-right text-2xl leading-tight text-red-200"><b class="text-white">${{ price }}</b> / night</div>
+        </div>
+    </a>
+</div>
+{{ /featured_chair }}
+
+
+<div class="max-w-screen-x px-4 md:px-16 mx-auto mt-16">
+
+    <header class="mb-8">
+        <h1 class="text-3xl font-bold">Checkout these amazing chairs!</h1>
+        <p class="text-base text-gray-600">Superchairs are the very best chairs available.</p>
+    </header>
+
+    <div class="flex flex-wrap -mx-4">
+        {{ collection:chairs superchair:is="true" limit="2" sort="random" }}
+            {{ partial:chairs.card class="w-full md:w-1/2 px-4 mb-12" }}
+        {{ /collection:chairs }}
+    </div>
+
+</div>
+
+<div class="max-w-screen-x px-4 md:px-16 mx-auto mt-16">
+
+    <header class="mb-8">
+        <h1 class="text-3xl font-bold">Sweet benches available for your butts.</h1>
+        <p class="text-base text-gray-600">Whether you're a fan of sitting or lying down, benches got your back.</p>
+    </header>
+
+    <div class="flex flex-wrap -mx-4">
+        {{ collection:chairs chair_type:is="bench" sort="random" limit="3"}}
+            {{ partial:chairs.card class="w-full md:w-1/3 px-4 mb-12" }}
+        {{ /collection:chairs }}
+    </div>
+
+</div>

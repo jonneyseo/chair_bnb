@@ -1,0 +1,15 @@
+
+<div class="max-w-screen-x px-4 md:px-16 mx-auto mt-16">
+
+    <header class="mb-16">
+        <h1 class="text-3xl font-bold">Start dreaming about your next sit</h1>
+        <p class="text-base text-gray-600">Chairs of all sorts, in all different places.</p>
+    </header>
+
+    <div class="flex flex-wrap -mx-4">
+        {{ collection:chairs }}
+            {{ partial:chairs.card class="w-full md:w-1/3 px-4 mb-12" }}
+        {{ /collection:chairs }}
+    </div>
+
+</div>
