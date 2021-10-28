@@ -13,11 +13,13 @@ Statamic 3 has extensive [documentation][docs].
 ## How To Set Up
 
 - Clone the repo
-- 'composer install'
-- 'cp env.example .env. && php artisan key:generage
-- 'php please make:user'
-- 'npm i && npm run dev'
-- 'npm run production'
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+- php please make:user
+- npm i && npm run dev
+- npm run production
+
 
 ## Important Links
 
